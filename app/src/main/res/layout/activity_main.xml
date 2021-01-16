@@ -39,6 +39,7 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="Turn Off"
         style="@style/Base.Widget.AppCompat.Button.Colored"/>
     <!--Discoverable button-->
@@ -48,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Discoverable"
+        android:visibility="gone"
         style="@style/Base.Widget.AppCompat.Button.Colored"/>
     <!--Get list of paired devices button-->
     <Button
@@ -63,15 +65,43 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Device"
+        android:text="Connect"
         style="@style/Base.Widget.AppCompat.Button.Colored"/>
-    <!--Show paired devices here-->
-    <TextView
-        android:id="@+id/pairedTv"
+    <!--Get list of paired devices button-->
+    <Button
+        android:id="@+id/disconectDeviceBtn"
         android:minWidth="200dp"
-        android:text=""
-        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconect"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    <!--Get list of paired devices button-->
+    <Button
+        android:id="@+id/sendMsgBtn"
+        android:minWidth="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Command"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    <!--Console here-->
+    <ScrollView
+        android:id="@+id/ScrollView01"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="150dip">
+
+        <EditText
+            android:id="@+id/console"
+            android:focusable="false"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:minLines="6"
+            android:scrollbars="vertical" />
+
+    </ScrollView>
+
 
 </LinearLayout>
